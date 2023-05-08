@@ -33,8 +33,21 @@ def TranscribeCommand():
 
     # Configure speech recognition
 
+    audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
+    speech_recognizer = speech_sdk.SpeechRecognizer(speech_config, audio_config)
+    print('Speak now...')
 
     # Process speech input
+    speech = speech_recognizer.recognize_once_async().get()
+    if speech.reason == speech_sdk.ResultReason.RecognizedSpeech:
+        command = speech.text
+        print(command)
+    else:
+        print(speech.reason)
+    if speech.reason == speech_sdk.ResultReason.Canceled:
+        cancellation = speech.cancellation_details
+        print(cancellation.reason)
+        print(cancellation.error_details)   
 
 
     # Return the command
