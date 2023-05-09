@@ -50,7 +50,6 @@ def TranscribeCommand():
         print(cancellation.reason)
         print(cancellation.error_details)   
 
-
     # Return the command
     return command
 
