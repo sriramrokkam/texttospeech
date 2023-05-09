@@ -22,7 +22,7 @@ def speech_synthesis_with_auto_language_detection_to_speaker(text):
     if result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
         print("Speech synthesized to speaker for text [{}]".format(text))
         stream = speechsdk.AudioDataStream(result)
-        stream.save_to_wav_file(r"C:\Users\user\Desktop\outputfff.wav")
+        stream.save_to_wav_file(r"C:\05.TexttoSpeech\output.wav")
 
 
 read_text = input("Enter Text to Read :")
