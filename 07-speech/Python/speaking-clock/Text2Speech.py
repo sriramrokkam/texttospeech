@@ -22,4 +22,4 @@ def speech_synthesis_with_auto_language_detection_to_speaker(text):
             stream = speechsdk.AudioDataStream(result)
             stream.save_to_wav_file(r"C:\Users\user\Desktop\outputfff.wav")
 
-speech_synthesis_with_auto_language_detection_to_speaker("तू कसा आहेस ")
+speech_synthesis_with_auto_language_detection_to_speaker("హలో గౌతమి. నేను ఒక AI రోబోట్! నా పేరు శ్రీరామ్! మీరు ఏలా ఉన్నారు ?")
