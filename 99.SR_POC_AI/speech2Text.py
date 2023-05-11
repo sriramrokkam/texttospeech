@@ -31,8 +31,9 @@ def main():
 def TranscribeCommand():
     command = ''
 
+    # automatic language detection.
+    auto_detect_source_language_config = speech_sdk.languageconfig.AutoDetectSourceLanguageConfig()
     # Configure speech recognition
-
     audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
     speech_recognizer = speech_sdk.SpeechRecognizer(
         speech_config, audio_config)
@@ -54,7 +55,7 @@ def TranscribeCommand():
     return command
 
 
-def TellTime():
+"""def TellTime():
     now = datetime.now()
     response_text = 'The time is {}:{:02d}'.format(now.hour, now.minute)
 
@@ -65,6 +66,7 @@ def TellTime():
     # Print the response
     print(response_text)
 
+"""
 
 if __name__ == "__main__":
     main()

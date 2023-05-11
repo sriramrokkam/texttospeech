@@ -29,5 +29,7 @@ def speech_synthesis_with_auto_language_detection_to_speaker(text):
         stream.save_to_wav_file(r"C:\05.TexttoSpeech\output.wav")
 
 
-read_text = input("Enter Text to Read :")
+'''read_text = input("Enter Text to Read :")'''
+read_text = "Sriram, gib mir zehn Rupien"
+
 speech_synthesis_with_auto_language_detection_to_speaker(read_text)
