@@ -28,6 +28,7 @@ def main():
     except Exception as ex:
         print(ex)
 
+
 def TranscribeCommand():
     command = ''
 
