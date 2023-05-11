@@ -30,6 +30,6 @@ def speech_synthesis_with_auto_language_detection_to_speaker(text):
 
 
 '''read_text = input("Enter Text to Read :")'''
-read_text = "Sriram, gib mir zehn Rupien"
+read_text = "German, gib mir zehn Rupien"
 
 speech_synthesis_with_auto_language_detection_to_speaker(read_text)
