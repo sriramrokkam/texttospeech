@@ -28,7 +28,7 @@ def speech_synthesis_with_auto_language_detection_to_speaker(text):
         stream = speechsdk.AudioDataStream(result)
         stream.save_to_wav_file(r"C:\05.TexttoSpeech\output.wav")
 
-'''read_text = input("Enter Text to Read :")'''
-read_text = "शुभ प्रभात! आज 11 मई, गुरुवार है"
 
+'''read_text = input("Enter Text to Read :")'''
+read_text = "नमस्ते गौतमी.. कैसी हैं आप? आप बैंगलोर वापस कब आए?"
 speech_synthesis_with_auto_language_detection_to_speaker(read_text)
