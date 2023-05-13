@@ -1,14 +1,18 @@
 from dotenv import load_dotenv
 import azure.cognitiveservices.speech as speechsdk
-speech_key = "37d48b0c67b74a87b7eb5ad2b788c335"
-service_region = "eastasia"
+import os
+
+load_dotenv()
+cog_key = os.getenv('COG_SERVICE_KEY')
+cog_region = os.getenv('COG_SERVICE_REGION')
 
 
 def speech_synthesis_with_auto_language_detection_to_speaker(text):
-    """performs speech synthesis to the default speaker with auto language detection
-       Note: this is a preview feature, which might be updated in future versions."""
+    """performs speech synthesis to the default speaker with 
+       auto language detection"""
+
     speech_config = speechsdk.SpeechConfig(
-        subscription=speech_key, region=service_region)
+        subscription=cog_key, region=cog_region)
 
     # create the auto detection language configuration without specific languages
     auto_detect_source_language_config = speechsdk.languageconfig.AutoDetectSourceLanguageConfig()
@@ -24,4 +28,7 @@ def speech_synthesis_with_auto_language_detection_to_speaker(text):
         stream = speechsdk.AudioDataStream(result)
         stream.save_to_wav_file(r"C:\05.TexttoSpeech\output.wav")
 
-speech_synthesis_with_auto_language_detection_to_speaker('అనగనగా ఒక రోజు ఒక బడిలొ బాలుడికి ఒక సందేహం వచ్చింది. అతని గురువుని వెళ్ళి అడిగాడు – “గురువుగారు, యెక్కువ మాట్లాడితే మంచిదా, తక్కువ మాట్లాడితే మంచిదా?')
+
+'''read_text = input("Enter Text to Read :")'''
+read_text = "नमस्ते गौतमी.. कैसी हैं आप? आप बैंगलोर वापस कब आए?"
+speech_synthesis_with_auto_language_detection_to_speaker(read_text)
