@@ -24,6 +24,4 @@ def speech_synthesis_with_auto_language_detection_to_speaker(text):
         stream = speechsdk.AudioDataStream(result)
         stream.save_to_wav_file(r"C:\05.TexttoSpeech\output.wav")
 
-
-read_text = input("Enter Text to Read :")
-speech_synthesis_with_auto_language_detection_to_speaker(read_text)
+speech_synthesis_with_auto_language_detection_to_speaker('అనగనగా ఒక రోజు ఒక బడిలొ బాలుడికి ఒక సందేహం వచ్చింది. అతని గురువుని వెళ్ళి అడిగాడు – “గురువుగారు, యెక్కువ మాట్లాడితే మంచిదా, తక్కువ మాట్లాడితే మంచిదా?')

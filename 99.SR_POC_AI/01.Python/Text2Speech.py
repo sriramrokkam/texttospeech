@@ -30,5 +30,5 @@ def speech_synthesis_with_auto_language_detection_to_speaker(text):
 
 
 '''read_text = input("Enter Text to Read :")'''
-read_text = "नमस्ते गौतमी.. कैसी हैं आप? आप बैंगलोर वापस कब आए?"
+read_text = "హలో గౌతమి, సోమవారం ఆఫీసుకు వెళ్తున్నారా??"
 speech_synthesis_with_auto_language_detection_to_speaker(read_text)
